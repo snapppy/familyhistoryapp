@@ -1,0 +1,8 @@
+#button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main-activities {
+    background-color: #FFFFFA;
+}
