@@ -1,3 +1,7 @@
+body {
+    background-color: #515052;
+}
+
 #logo-container {
     display: flex;
 }
@@ -30,8 +34,9 @@ h1 {
     margin-right: 50px;
     margin-left: 50px;
     padding: 50px;
-    background-color: #515052;
+    background-color: white;
     border-radius: 25px;
+    max-width: 450px;
 }
 
 video {
