@@ -1,0 +1,49 @@
+body {
+    background-color: #515052;
+}
+
+#logo-container {
+    display: flex;
+}
+
+#logo {
+    background-color: #C0D6DF;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Playball', cursive;
+}
+
+h1 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 24px;
+    align-self: flex-end;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main-activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 25px;
+    max-width: 450px;
+}
+
+video {
+    display: none;
+}
+
+#media {
+    display: flex;
+    justify-content: center;
+}
