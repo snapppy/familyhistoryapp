@@ -14,7 +14,18 @@
                     console.log("AJAX succeded");
                     var object = JSON.parse(myRequest.responseText);
                     console.log(object);
-                    //go through the list of memories
+                    
+                    parseMemories(object);
+                                    }
+                else {
+                    console.log("AJAX working...");
+                }
+            };
+            myRequest.open("GET", "https://bagleric.github.io/CIT261/Memories/memoryFile.json", true);
+            myRequest.send();
+        }
+        function parseMemories(object){
+            //go through the list of memories
                     var n = 0;
                     console.log(Object.keys(object).length);
                     var history = document.createElement("div");
@@ -50,26 +61,11 @@
                             memoryDiv.className = "smallDiv";
                         }
                         n++;
-                        history.appendChild(memoryDiv);
-                        
+                        history.appendChild(memoryDiv);   
                     }
-                    //                    var myDiv = document.createElement("div");
-                    //                    myDiv.innerHTML = "<p>" + object.memory.prompt + "</p>" + "<video src=\"https://bagleric.github.io/CIT261/Memories/video.mp4\"";
-                    //var video = document.createElement("video");
-                    //var history = document.querySelector(".test");
-                    
                     console.log(document.querySelector(".test").childNodes);
                     document.querySelector(".test").replaceChild(history, (document.querySelector(".test").childNodes[0]));
                     console.log(document.querySelector(".test").childNodes);
-                    //                    video.src = "https://bagleric.github.io/CIT261/Memories/video.mp4";
-                    /* document.getElementById("test").innerHTML = "<p>"+object.memory.prompt + "</p>" + "<video src='" + object.memory.videoURL;*/
-                }
-                else {
-                    console.log("AJAX working...");
-                }
-            };
-            myRequest.open("GET", "https://bagleric.github.io/CIT261/Memories/memoryFile.json", true);
-            myRequest.send();
         }
     </script>
     <style>
