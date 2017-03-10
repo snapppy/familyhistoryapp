@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="S-UA-Compatible" content="ie=edge" />
+    <title>MemoriesTesting</title>
+    <script>
+        function loadMemories() {
+            console.log("Function: Load Memories");
+            var myRequest = new XMLHttpRequest();
+            myRequest.onreadystatechange = function () {
+                if (myRequest.readyState === 4 && myRequest.status === 200) {
+                    console.log("AJAX succeded");
+                    
+                    var object = JSON.parse(myRequest.responseText);
+                    console.log(object);
+                    
+                    //create the new memory div
+                    var memoryDiv = document.createElement("div");
+                    
+                    //add a prompt title
+                    var prompt = document.createElement("div");
+                    prompt.innerHTML = object.memory.prompt;
+                    
+                    //add a video
+                    var video = document.createElement("video");
+                    video.src = object.memory.videoURL;
+                    
+                    
+                    //add a picture
+                    var image = document.createElement("img");
+                    image.src = object.memory.photoURL;
+                    
+                    memoryDiv.appendChild(prompt);
+                    memoryDiv.appendChild(video);
+                    memoryDiv.appendChild(image);
+                    
+                    
+//                    var myDiv = document.createElement("div");
+//                    myDiv.innerHTML = "<p>" + object.memory.prompt + "</p>" + "<video src=\"https://bagleric.github.io/CIT261/Memories/video.mp4\"";
+                   
+                    //var video = document.createElement("video");
+                    
+                    var history = document.querySelector(".test");
+                    history.appendChild(memoryDiv);
+//                    video.src = "https://bagleric.github.io/CIT261/Memories/video.mp4";
+                    /* document.getElementById("test").innerHTML = "<p>"+object.memory.prompt + "</p>" + "<video src='" + object.memory.videoURL;*/
+                }
+                else {
+                    console.log("AJAX working...");
+                }
+            };
+            myRequest.open("GET", "https://bagleric.github.io/CIT261/Memories/memoryFile.json", true);
+            myRequest.send();
+        }
+    </script>
+    <style>
+        video{
+            width:2in;
+            autoplay;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background:red;">
+        <video width="45%" controls autoplay src="video.mp4"></video> <img width="45%" src="picture.jpg" /> </div>
+    <div onclick=loadMemories() class="test" style="background:green; margin:.5in; padding:.5in; color:white;"> Here your videos should appear.</div>
+</body>
+
+</html>
