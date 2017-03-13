@@ -1,0 +1,60 @@
+   video {
+       margin: 1%;
+       padding: 2.5%;
+       width: 93%;
+       align-content: center;
+   }
+   
+
+   .history {
+       height:90% ;
+       position: absolute;
+       bottom: 0;
+       width: 90%;
+       background-color: #515052;
+       margin: 4.5%;
+       overflow: auto;
+       display: block;            
+   }
+   
+   .bigDiv {
+       align-content: center;
+       background-color: #F1FFFA;
+       float: left;
+       margin: 1%;
+       padding: 2.5%;
+       width: 93%;
+   }
+   
+   .smallDiv {
+       background-color: #C0D6DF;
+       margin: 1%;
+       padding: 2.5%;
+       float: left;
+       width: 26%;
+   }
+
+.historyButton
+{
+    padding: 15px 25px;
+    font-size: 25px;
+    text-align: center;
+    outline: solid white;
+    color: #fff;
+    background-color: #c56576;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.historyButton:touch
+{
+    background-color:#83444f
+    
+}
+
+.historyButton:active
+{
+    background-color: #83444f;
+    transform: translateY(4px);
+}

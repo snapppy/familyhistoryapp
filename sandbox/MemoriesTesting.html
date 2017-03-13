@@ -5,106 +5,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="S-UA-Compatible" content="ie=edge" />
     <title>MemoriesTesting</title>
-    <script>
-        function loadMemories() {
-            console.log("Function: Load Memories");
-            var myRequest = new XMLHttpRequest();
-            myRequest.onreadystatechange = function () {
-                if (myRequest.readyState === 4 && myRequest.status === 200) {
-                    console.log("AJAX succeded");
-                    var object = JSON.parse(myRequest.responseText);
-                    console.log(object);
-                    
-                    parseMemories(object);
-                                    }
-                else {
-                    console.log("AJAX working...");
-                }
-            };
-            myRequest.open("GET", "https://bagleric.github.io/CIT261/Memories/memoryFile.json", true);
-            myRequest.send();
-        }
-        function parseMemories(object){
-            //go through the list of memories
-                    var n = 0;
-                    console.log(Object.keys(object).length);
-                    var history = document.createElement("div");
-                    for (var i = 0; i < Object.keys(object.memory).length; i++) {
-                        console.log("for loop");
-        
-                        //create the new memory div and determine the size
-                        var memoryDiv = document.createElement("div");
-
-                        //add a prompt title
-                        var prompt = document.createElement("div");
-                        prompt.innerHTML = object.memory[i].prompt;
-                        
-                        //add a video
-                        var video = document.createElement("video");
-                        video.src = object.memory[i].videoURL;
-                        video.setAttribute("controls", "controls");
-                       
-                        //add a picture
-                        var image = document.createElement("img");
-                        image.src = object.memory[i].photoURL;
-                        memoryDiv.appendChild(prompt);
-                        memoryDiv.appendChild(video);
-                        memoryDiv.appendChild(image);
-                        
-                        //assign the memoryDiv a size by giving it a class name.
-                        if (n % 4 === 0) {
-                            console.log("n%4" + ":" + n);
-                            memoryDiv.className = "bigDiv";
-                        }
-                        else {
-                            console.log("else" + ":" + n);
-                            memoryDiv.className = "smallDiv";
-                        }
-                        n++;
-                        history.appendChild(memoryDiv);   
-                    }
-                    console.log(document.querySelector(".test").childNodes);
-                    document.querySelector(".test").replaceChild(history, (document.querySelector(".test").childNodes[0]));
-                    console.log(document.querySelector(".test").childNodes);
-        }
-    </script>
-    <style>
-        video {
-            margin: 1%;
-            padding: 2.5%;
-            width:93%;
-            align-content: center;
-        }
-        .test{
-            height:;
-            position:absolute;
-            bottom: 0;
-            width: 90%;
-            display: -webkit-flex;
-            display: flex;
-            background-color: #515052;
-            margin: 4.5%;
-        }
-        .bigDiv{
-            align-content: center;
-            background-color: #F1FFFA;
-            float: left;
-            margin: 1%;
-            padding: 2.5%;
-            width:93%;
-        }
-        .smallDiv{ 
-            background-color: #C0D6DF;
-            margin: 1%;
-            padding: 2.5%;
-            float: left;
-            width:26%;
-        }
-    </style>
+    <script type="text/javascript" src="history.js"></script>
+    <link rel="stylesheet" href="history.css">
 </head>
 
 <body>
-    <div onclick=loadMemories() class="test"> Here your videos should appear.</div>
+    <button class="historyButton" onclick=loadMemories() onblur="hideHistory()">My History</button>
+    <div class="history"> Here your videos should appear.</div>
 </body>
 
 </html>
