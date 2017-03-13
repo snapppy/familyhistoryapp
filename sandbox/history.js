@@ -31,10 +31,13 @@ function parseMemories(object) {
         }
         n = (n + 1);
         history.appendChild(memoryDiv);
+        document.getElementById("history").focus();
     }
     console.log(document.querySelector(".history").childNodes);
     document.querySelector(".history").replaceChild(history, (document.querySelector(".history").childNodes[0]));
     console.log(document.querySelector(".history").childNodes);
+    document.getElementsByClassName("history")[0].style.display = "block";
+     document.getElementsByClassName("behindHistory")[0].style.display = "block";
 }
 
 function loadMemories() {
@@ -56,5 +59,7 @@ function loadMemories() {
 }
 
 function hideHistory() {
-    document.getElementById("history").display= "hidden"
+    console.log("hideHistory");
+  document.getElementById("history").style.display = "none";
+    document.getElementsByClassName("behindHistory")[0].style.display = "none";
 }

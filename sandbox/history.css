@@ -7,17 +7,27 @@
    
 
    .history {
-       height:90% ;
+        z-index: 2;
+       height:75% ;
        position: absolute;
        bottom: 0;
-       width: 90%;
+       width: 75%;
        background-color: #515052;
-       margin: 4.5%;
+       margin: 12.5%;
        overflow: auto;
-       display: block;            
+       display: none;  
+
    }
-   
+.behindHistory{
+    z-index: 1;
+    height:1150px;
+    width: 100%;
+    opacity: .5;
+    background-color: black;
+    display: none;
+}
    .bigDiv {
+               z-index: 2;
        align-content: center;
        background-color: #F1FFFA;
        float: left;
@@ -27,6 +37,7 @@
    }
    
    .smallDiv {
+               z-index: 2;
        background-color: #C0D6DF;
        margin: 1%;
        padding: 2.5%;
@@ -35,7 +46,7 @@
    }
 
 .historyButton
-{
+{  
     padding: 15px 25px;
     font-size: 25px;
     text-align: center;
