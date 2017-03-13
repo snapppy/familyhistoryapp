@@ -17,7 +17,7 @@ body {
 
 h1 {
     font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 24px;
+    font-size: 72px;
     align-self: flex-end;
 }
 
@@ -26,17 +26,22 @@ h1 {
     justify-content: space-around;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #main-activities {
     display: flex;
     flex-direction: column;
+    align-self: center;
     justify-content: center;
     align-content: center;
-    margin-right: 50px;
-    margin-left: 50px;
-    padding: 50px;
     background-color: white;
     border-radius: 25px;
-    max-width: 450px;
+    margin: 50px;
+    max-width: 600px;
 }
 
 video {
@@ -46,4 +51,59 @@ video {
 #media {
     display: flex;
     justify-content: center;
+}
+
+#prompt {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+
+/*History Icon*/
+
+#history {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border: 15px solid #ee8f9d;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #ee8f9d;
+}
+
+#historyshadow {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    border: 15px solid #c17884;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+#cross {
+    position: fixed;
+    right: 50px;
+    bottom: 90px;
+    height: 50px;
+    width: 50px;
+    border-color: #515052;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    background-color: transparent;
+}
+
+#crossshadow {
+    position: fixed;
+    right: 55px;
+    bottom: 85px;
+    height: 50px;
+    width: 50px;
+    border-color: #c17884;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    background-color: transparent;
 }

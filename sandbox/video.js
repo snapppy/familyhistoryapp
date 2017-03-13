@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateCanvas(){
         context.clearRect(0,0,canvas.width,canvas.height);
-        context.drawImage(video, 0, 0, 400, 400);
+        context.drawImage(video, 0, 0, 600, 600);
         //frames.push(canvas.toDataURL('image/webp', 1));
 
         requestAnimationFrame(updateCanvas);

@@ -1,8 +1,9 @@
-{
-        "prompt1":"Who was your childhood best friend?",
-        "prompt2":"Where were you born?",
-        "prompt3":"Who is your idol?",
-        "prompt4":"What find memories do you have of school?",
-        "prompt5":"How did you meet your significant other?",
-        "prompt6":"What is your favorite food?"
+{ "prompts": [
+    "Who was your childhood best friend?",
+    "Where were you born?",
+    "Who is your idol?",
+    "What find memories do you have of school?",
+    "How did you meet your significant other?",
+    "What is your favorite food?"
+]
 }
