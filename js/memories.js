@@ -24,12 +24,15 @@ var memories = {
                 console.log("Not ready.");
             }
         };
+        try {
+            memoryRequest.open("PUT", "https://cit261famhistory.firebaseio.com/memories.json", true);
 
-        memoryRequest.open("PUT", "https://cit261famhistory.firebaseio.com/memories.json", true);
+            memoryRequest.setRequestHeader("Content-type", "application/json");
 
-        memoryRequest.setRequestHeader("Content-type", "application/json");
-
-        memoryRequest.send(jsonMemories);
+            memoryRequest.send(jsonMemories);
+        } catch(err) {
+            alert("Cannot access database. Check creditials. " + err);
+        }
     }
 }
 

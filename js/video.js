@@ -53,14 +53,23 @@ function snapShot(element) {
     //save image url into json?
 
     //make snapshot animation
-    var snapshotTransition = document.getElementById("snapshot-transition");
+    /*var snapshotTransition = document.getElementById("snapshot-transition");*/
 
-    snapshotTransition.style.backgroundImage = "url('" + image + "')";
+    /*snapshotTransition.style.backgroundImage = "url('" + image + "')";
     snapshotTransition.style.transform = "scale(1.2)";
 
     document.getElementById("download-icon").style.display = "block";
     document.getElementById("download-icon-triangle").style.display = "block";
-    document.getElementById("download-icon-base").style.display = "block";
+    document.getElementById("download-icon-base").style.display = "block";*/
+}
+
+function close() {
+    /*snapshotTransition.style.backgroundImage = "url()";
+    snapshotTransition.style.transform = "scale(1)";
+
+    document.getElementById("download-icon").style.display = "none";
+    document.getElementById("download-icon-triangle").style.display = "none";
+    document.getElementById("download-icon-base").style.display = "none";*/
 }
 
 
