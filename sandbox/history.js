@@ -25,7 +25,8 @@ function parseMemories(object) {
         if (n % 4 === 0) {
             console.log("n%4" + ":" + n);
             memoryDiv.className = "bigDiv";
-        } else {
+        }
+        else {
             console.log("else" + ":" + n);
             memoryDiv.className = "smallDiv";
         }
@@ -37,29 +38,40 @@ function parseMemories(object) {
     document.querySelector(".history").replaceChild(history, (document.querySelector(".history").childNodes[0]));
     console.log(document.querySelector(".history").childNodes);
     document.getElementsByClassName("history")[0].style.display = "block";
-     document.getElementsByClassName("behindHistory")[0].style.display = "block";
+    document.getElementsByClassName("behindHistory")[0].style.display = "block";
 }
 
-function loadMemories() {
-    console.log("Function: Load Memories");
+function ajaxRequest(type, path) {
     var myRequest, object;
     myRequest = new XMLHttpRequest();
     myRequest.onreadystatechange = function () {
-        if (myRequest.readyState === 4 && myRequest.status === 200) {
-            console.log("AJAX succeded");
+        if (myRequest.readyState === 4) {
+            if( myRequest.status === 200) {
+            console.log("AJAX successful");
             object = JSON.parse(myRequest.responseText);
             console.log(object);
             parseMemories(object);
-        } else {
-            console.log("AJAX working...");
         }
+        else {
+            throw new Error("unable to manage ajax request");
+        }}
     };
-    myRequest.open("GET", "https://bagleric.github.io/CIT261/Memories/memoryFile.json", true);
-    myRequest.send();
+    myRequest.open(type, path, true);
+    myRequest.send(); 
+}
+function loadMemories() {
+    
+    console.log("Function: Load Memories");
+    try{
+    ajaxRequest("GET", "https://bagleric.github.io/CIT261/Memories/memoryFile.json" );
+    }
+    catch(err){
+        console.log("ERROR: " + err + "for loading the memories.");
+        }
 }
 
 function hideHistory() {
     console.log("hideHistory");
-  document.getElementById("history").style.display = "none";
+    document.getElementById("history").style.display = "none";
     document.getElementsByClassName("behindHistory")[0].style.display = "none";
 }
