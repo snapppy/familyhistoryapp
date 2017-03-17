@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Stuff</title>
+        <link rel="stylesheet" href="../css/index.css" type="text/css"> </head>
+    <script src="../js/prompt.js"></script>
+    <script src="../js/video.js"></script>
+    <script src="../js/memories.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Playball" rel="stylesheet">
+
+    <body>
+        <header>
+            <div id="logo-container">
+                <div id="logo"></div>
+                <h1>Record Your Own History</h1>
+            </div>
+        </header>
+        <main>
+            <div id="prompt"></div>
+            <div id="main-activities">
+                <div id="media">
+                    <canvas id="canvas" width="600" height="600"></canvas>
+                    <video></video>
+                </div>
+                <div id="button-container">
+                    <div id="camera-icon" onclick="snapShot(document.body)"> <img src="../icons/camera.jpg"> </div>
+                    <div id="recording-icon"> <img src="../icons/recording.jpg" > </div>
+                </div>
+            </div>
+            <div id="historyshadow"></div>
+            <div id="history"></div>
+            <div id="crossshadow"></div>
+            <div id="cross"></div>
+            <a href="#"></a>
+        </main>
+    </body>
+
+</html>

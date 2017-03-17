@@ -18,7 +18,7 @@ window.onload = function() {
 
     promptRequest.open("GET", "https://cit261famhistory.firebaseio.com/prompts.json", true);
 
-   //https://cit261famhistory.firebaseio.com/prompts.json  //https://snapppy.github.io/familyhistoryapp/prompts.json
+    //https://cit261famhistory.firebaseio.com/prompts.json  //https://snapppy.github.io/familyhistoryapp/prompts.json
 
     promptRequest.send();
 }

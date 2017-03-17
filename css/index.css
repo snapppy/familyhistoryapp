@@ -1,0 +1,109 @@
+body {
+    background-color: #515052;
+}
+
+#logo-container {
+    display: flex;
+}
+
+#logo {
+    background-color: #C0D6DF;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Playball', cursive;
+}
+
+h1 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 72px;
+    align-self: flex-end;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main-activities {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    border-radius: 25px;
+    margin: 50px;
+    max-width: 600px;
+}
+
+video {
+    display: none;
+}
+
+#media {
+    display: flex;
+    justify-content: center;
+}
+
+#prompt {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+
+/*History Icon*/
+
+#history {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border: 15px solid #ee8f9d;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #ee8f9d;
+}
+
+#historyshadow {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    border: 15px solid #c17884;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+#cross {
+    position: fixed;
+    right: 50px;
+    bottom: 90px;
+    height: 50px;
+    width: 50px;
+    border-color: #515052;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    background-color: transparent;
+}
+
+#crossshadow {
+    position: fixed;
+    right: 55px;
+    bottom: 85px;
+    height: 50px;
+    width: 50px;
+    border-color: #c17884;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    background-color: transparent;
+}
