@@ -70,40 +70,26 @@ video.eCamera {
     background-image: url();
 }
 
-#download-icon {
-    display: none;
-    position: fixed;
-    background-color: black;
-    bottom: 60px;
-    left: 70px;
-    height: 50px;
-    width: 30px;
-    border-radius: 10px;
+#camera-icon {
+    z-index: 4;
+    transition: all 1s;
+    border-radius: 25px;
 }
 
-#download-icon-triangle {
-    display: none;
-    position: fixed;
-    bottom: 40px;
-    left: 55px;
-    width: 0;
-    height: 0;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    border-top: 35px solid black;
+#camera-icon:active {
+    content: url(../icons/camera-clicked.jpg);
+    transform: translateY(10px);
 }
 
-#download-icon-base {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    left: 40px;
-    height: 20px;
-    width: 60px;
-    border-width: 0px 15px 10px 15px;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: black;
+#recording-icon {
+    z-index: 4;
+    transition: all 1s;
+    border-radius: 25px;
+}
+
+#recording-icon:active {
+    content: url(../icons/recording-clicked.jpg);
+    transform: translateY(10px);
 }
 
 

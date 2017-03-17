@@ -10,14 +10,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var url = canvas.toDataURL('image/webp', 1);
 
-    //get access to camera and microphone, vender prefixes.
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
-        navigator.mozGetUserMedia || navigator.msGetUserMedia;
+    try {
+        //get access to camera and microphone, vender prefixes.
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+            navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
-    window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
+        window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
 
-    //taking video or audio, and two functions for if it is successful or if there's an error.
-    navigator.getUserMedia({video: true, audio: true}, onSuccessCallback, onErrorCallback);
+        //taking video or audio, and two functions for if it is successful or if there's an error.
+        navigator.getUserMedia({video: true, audio: true}, onSuccessCallback, onErrorCallback);
+    } catch (err) {
+        alert("Your browser doesn't support webcam intergration. Try updating your browser to the latest version.");
+    }
 
     function onSuccessCallback(stream) {
 
