@@ -6,8 +6,8 @@
    }
    
 
-   .history {
-        z-index: 2;
+   .eHistory {
+        z-index: 5;
        height:75% ;
        position: absolute;
        bottom: 0;
@@ -18,8 +18,8 @@
        display: none;  
 
    }
-.behindHistory{
-    z-index: 1;
+.eBehindHistory{
+    z-index: 4;
     height:1150px;
     width: 100%;
     opacity: .5;
@@ -27,7 +27,7 @@
     display: none;
 }
    .bigDiv {
-               z-index: 2;
+               z-index: 5;
        align-content: center;
        background-color: #F1FFFA;
        float: left;
@@ -37,7 +37,7 @@
    }
    
    .smallDiv {
-               z-index: 2;
+               z-index: 5;
        background-color: #C0D6DF;
        margin: 1%;
        padding: 2.5%;
@@ -45,26 +45,23 @@
        width: 26%;
    }
 
-.historyButton
+.eHistoryButton
 {  
     padding: 15px 25px;
-    font-size: 25px;
-    text-align: center;
-    outline: solid white;
-    color: #fff;
-    background-color: #c56576;
-    border-radius: 10px;
     position: absolute;
     bottom: 0;
+    right: 0;
+    z-index: 4;
+    z-index: 4;
 }
 
-.historyButton:touch
+.eHistoryButton:touch
 {
     background-color:#83444f
     
 }
 
-.historyButton:active
+.eHistoryButton:active
 {
     background-color: #83444f;
     transform: translateY(4px);

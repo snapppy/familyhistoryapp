@@ -1,0 +1,70 @@
+   video {
+       margin: 1%;
+       padding: 2.5%;
+       width: 93%;
+       align-content: center;
+   }
+   
+
+   .ehistory {
+        z-index: 4;
+       height:75% ;
+       position: absolute;
+       bottom: 0;
+       width: 75%;
+       background-color: #515052;
+       margin: 12.5%;
+       overflow: auto;
+       display: none;  
+
+   }
+.ebehindHistory{
+    z-index: 3;
+    height:1150px;
+    width: 100%;
+    opacity: .5;
+    background-color: black;
+    display: none;
+}
+   .bigDiv {
+               z-index: 4;
+       align-content: center;
+       background-color: #F1FFFA;
+       float: left;
+       margin: 1%;
+       padding: 2.5%;
+       width: 93%;
+   }
+   
+   .smallDiv {
+               z-index: 4;
+       background-color: #C0D6DF;
+       margin: 1%;
+       padding: 2.5%;
+       float: left;
+       width: 26%;
+   }
+
+.ehistoryButton
+{  
+    padding: 15px 25px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.ehistoryButton:touch
+{
+    background-color:#83444f
+    
+}
+
+.ehistoryButton:active
+{
+    background-color: #83444f;
+    transform: translateY(4px);
+}

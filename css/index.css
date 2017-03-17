@@ -1,4 +1,5 @@
 body {
+    z-index: 1;
     background-color: #515052;
 }
 
@@ -27,6 +28,7 @@ h1 {
 }
 
 main {
+
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -44,7 +46,7 @@ main {
     max-width: 600px;
 }
 
-video {
+video.eCamera {
     display: none;
 }
 
@@ -58,54 +60,6 @@ video {
     font-size: 60px;
     text-align: center;
     color: white;
-}
-
-/*History Icon*/
-
-#history {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    border: 15px solid #ee8f9d;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: #ee8f9d;
-}
-
-#historyshadow {
-    position: fixed;
-    right: 20px;
-    bottom: 10px;
-    border: 15px solid #c17884;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: transparent;
-}
-
-#cross {
-    position: fixed;
-    right: 50px;
-    bottom: 90px;
-    height: 50px;
-    width: 50px;
-    border-color: #515052;
-    border-style: solid;
-    border-width: 0 0 20px 20px;
-    background-color: transparent;
-}
-
-#crossshadow {
-    position: fixed;
-    right: 55px;
-    bottom: 85px;
-    height: 50px;
-    width: 50px;
-    border-color: #c17884;
-    border-style: solid;
-    border-width: 0 0 20px 20px;
-    background-color: transparent;
 }
 
 #snapshot-transition {
@@ -152,3 +106,72 @@ video {
     border-style: solid;
     border-color: black;
 }
+
+
+/*CSS from Eric */
+ video {
+       margin: 1%;
+       padding: 2.5%;
+       width: 93%;
+       align-content: center;
+   }
+   
+
+   .eHistory {
+        z-index: 5;
+       height:75% ;
+       position: absolute;
+       bottom: 0;
+       width: 75%;
+       background-color: #515052;
+       margin: 12.5%;
+       overflow: auto;
+       display: none;  
+
+   }
+.eBehindHistory{
+    z-index: 4;
+    height:2000px;
+    width: 100%;
+    opacity: .5;
+    background-color: black;
+    display: none;
+    position: fixed;
+}
+   .bigDiv {
+               z-index: 5;
+       align-content: center;
+       background-color: #F1FFFA;
+       float: left;
+       margin: 1%;
+       padding: 2.5%;
+       width: 93%;
+   }
+   
+   .smallDiv {
+               z-index: 5;
+       background-color: #C0D6DF;
+       margin: 1%;
+       padding: 2.5%;
+       float: left;
+       width: 26%;
+   }
+
+.eHistoryButton
+{ 
+    z-index: 4;
+}
+
+.eHistoryButton:touch
+{
+    background-color:#83444f
+    
+}
+
+.eHistoryButton:active
+{
+    background-color: #83444f;
+    transform: translateY(4px);
+}
+
+/*end CSS from Eric*/

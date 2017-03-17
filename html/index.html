@@ -8,6 +8,7 @@
     <script src="../js/prompt.js"></script>
     <script src="../js/video.js"></script>
     <script src="../js/memories.js"></script>
+    <script src="../sandbox/ehistory.js"></script>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Playball" rel="stylesheet">
 
@@ -18,12 +19,14 @@
                 <h1>Record Your Own History</h1>
             </div>
         </header>
+            
+ 
         <main>
             <div id="prompt"></div>
             <div id="main-activities">
                 <div id="media">
                     <canvas id="canvas" width="600" height="600"></canvas>
-                    <video></video>
+                    <video class="eCamera"></video>
                     <div id="snapshot-transition" onclick="close()">
                         <div id="download-icon">
                             <div id="download-icon-triangle"></div>
@@ -35,14 +38,14 @@
                 <div id="button-container">
                     <div id="camera-icon" onclick="snapShot(document.body)"> <img src="../icons/camera.jpg"> </div>
                     <div id="recording-icon"> <img src="../icons/recording.jpg" > </div>
+                    <img class="eHistoryButton" onclick=loadMemories() src="../icons/history.JPG"/>
                 </div>
             </div>
-            <div id="historyshadow"></div>
-            <div id="history"></div>
-            <div id="crossshadow"></div>
-            <div id="cross"></div>
             <a href="#"></a>
+                       <div class="eBehindHistory" onclick=hideHistory() ></div>
+    <div id="eHistory" class="eHistory" > Here your videos should appear.</div>
         </main>
+                       <div class="eBehindHistory" onclick=hideHistory() ></div>
     </body>
 
 </html>
